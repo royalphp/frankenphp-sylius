@@ -1,0 +1,16 @@
+# Production environment override
+services:
+  php:
+    build:
+      context: .
+      target: frankenphp_prod
+    environment:
+      APP_SECRET: ${APP_SECRET}
+      MERCURE_PUBLISHER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
+      MERCURE_SUBSCRIBER_JWT_KEY: ${CADDY_MERCURE_JWT_SECRET}
+
+  worker:
+    build:
+      context: .
+      target: frankenphp_prod
+    command: bin/console messenger:consume main scheduler_default catalog_promotion_removal --limit=10 --memory-limit=128M --time-limit=3600

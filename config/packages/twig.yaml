@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        public: false
+        autowire: true
+        autoconfigure: true
+
+    Twig\Extra\Intl\IntlExtension: ~
+
+twig:
+    file_name_pattern: '*.twig'
+
+when@test:
+    twig:
+        strict_variables: true
