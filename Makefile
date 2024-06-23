@@ -93,7 +93,7 @@ endif
 
 build_assets: ## Build optimized frontend data by environment
 ifeq ($(PROJECT_MODE), prod)
-	docker run --rm -v $$(PWD):/app -w /app node:lts-alpine sh -c 'npm ci; npm run build'
+	docker run --rm -v $(shell pwd):/app -w /app node:lts-alpine sh -c 'npm ci; npm run build'
 	rm -rf 'node_modules/'
 else
 	@$(NPM) ci
