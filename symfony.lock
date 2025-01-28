@@ -132,7 +132,7 @@
         }
     },
     "php-http/discovery": {
-        "version": "1.19",
+        "version": "1.20",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -200,7 +200,17 @@
         "version": "v2.0.0"
     },
     "sylius/paypal-plugin": {
-        "version": "v1.6.0"
+        "version": "1.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.7",
+            "ref": "ee6c048cc6f38febd7c3ca9915e7aace7af17b52"
+        },
+        "files": [
+            "config/packages/sylius_paypal.yaml",
+            "config/routes/sylius_paypal.yaml"
+        ]
     },
     "sylius/resource-bundle": {
         "version": "1.10",
