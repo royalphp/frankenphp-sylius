@@ -13,10 +13,6 @@ parameters:
     currency: '%app.default_currency%'
     sylius_core.public_dir: '%kernel.project_dir%/public'
 
-when@dev:
-    sylius_api:
-        enabled: true
-
 sylius_addressing:
     resources:
         address:
@@ -55,6 +51,9 @@ sylius_channel:
                 model: App\Entity\Channel\Channel
 sylius_core:
     resources:
+        avatar_image:
+            classes:
+                model: App\Entity\User\AvatarImage
         product_image:
             classes:
                 model: App\Entity\Product\ProductImage
@@ -73,6 +72,9 @@ sylius_core:
         channel_pricing_log_entry:
             classes:
                 model: App\Entity\Channel\ChannelPricingLogEntry
+        shop_billing_data:
+            classes:
+                model: App\Entity\Channel\ShopBillingData
 
 sylius_currency:
     resources:
@@ -178,6 +180,9 @@ sylius_promotion:
         catalog_promotion:
             classes:
                 model: App\Entity\Promotion\CatalogPromotion
+            translation:
+                classes:
+                    model: App\Entity\Promotion\CatalogPromotionTranslation
         catalog_promotion_action:
             classes:
                 model: App\Entity\Promotion\CatalogPromotionAction
@@ -187,6 +192,9 @@ sylius_promotion:
         promotion:
             classes:
                 model: App\Entity\Promotion\Promotion
+            translation:
+                classes:
+                    model: App\Entity\Promotion\PromotionTranslation
         promotion_rule:
             classes:
                 model: App\Entity\Promotion\PromotionRule
@@ -215,6 +223,9 @@ sylius_shipping:
             translation:
                 classes:
                     model: App\Entity\Shipping\ShippingMethodTranslation
+        shipping_method_rule:
+            classes:
+                model: App\Entity\Shipping\ShippingMethodRule
         shipping_category:
             classes:
                 model: App\Entity\Shipping\ShippingCategory
@@ -261,3 +272,14 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - "%kernel.project_dir%/themes"
+
+when@dev:
+    sylius_api:
+        enabled: true
+
+when@test:
+    sylius_user:
+        encoder: plaintext
+    sylius_theme:
+        sources:
+            test: ~
