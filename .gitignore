@@ -1,4 +1,5 @@
 /.idea/
+/config/encryption/*key
 /public/assets/
 /public/media/
 /**/.DS_Store

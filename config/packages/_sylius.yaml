@@ -1,9 +1,10 @@
 imports:
     - { resource: '@SyliusCoreBundle/Resources/config/app/config.yml' }
+    - { resource: '@SyliusPayumBundle/Resources/config/app/config.yaml' }
     - { resource: '@SyliusAdminBundle/Resources/config/app/config.yml' }
-    - { resource: '@SyliusApiBundle/Resources/config/app/config.yaml' }
     - { resource: '@SyliusShopBundle/Resources/config/app/config.yml' }
-    - { resource: '@SyliusPayPalPlugin/Resources/config/config.yaml' }
+    - { resource: '@SyliusApiBundle/Resources/config/app/config.yaml' }
+    - { resource: '@SyliusPayPalPlugin/config/config.yaml' }
 
 parameters:
     locale: '%app.default_locale%'
@@ -46,6 +47,7 @@ sylius_channel:
         channel:
             classes:
                 model: App\Entity\Channel\Channel
+
 sylius_core:
     resources:
         avatar_image:
@@ -126,15 +128,18 @@ sylius_payment:
         payment:
             classes:
                 model: App\Entity\Payment\Payment
+        payment_request:
+            classes:
+                model: App\Entity\Payment\PaymentRequest
+        gateway_config:
+            classes:
+                model: App\Entity\Payment\GatewayConfig
 
 sylius_payum:
     resources:
         payment_security_token:
             classes:
                 model: App\Entity\Payment\PaymentSecurityToken
-        gateway_config:
-            classes:
-                model: App\Entity\Payment\GatewayConfig
 
 sylius_product:
     resources:
@@ -244,6 +249,7 @@ sylius_taxonomy:
             translation:
                 classes:
                     model: App\Entity\Taxonomy\TaxonTranslation
+
 sylius_user:
     resources:
         admin:
@@ -258,6 +264,27 @@ sylius_user:
             user:
                 classes:
                     model: App\Entity\User\UserOAuth
+
+sylius_twig_hooks:
+    hooks:
+        'sylius_admin.base#stylesheets':
+            app_styles:
+                template: 'admin/stylesheets.html.twig'
+        'sylius_admin.base#javascripts':
+            app_javascripts:
+                template: 'admin/javascripts.html.twig'
+
+        'sylius_shop.base#stylesheets':
+            app_styles:
+                template: 'shop/stylesheets.html.twig'
+        'sylius_shop.base#javascripts':
+            app_javascripts:
+                template: 'shop/javascripts.html.twig'
+
+sylius_resource:
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Entity'
 
 sylius_shop:
     product_grid:
@@ -275,8 +302,9 @@ when@dev:
         enabled: true
 
 when@test:
-    sylius_user:
-        encoder: plaintext
+    sylius_admin:
+        notifications:
+            hub_enabled: false
     sylius_theme:
         sources:
             test: ~

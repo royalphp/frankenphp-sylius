@@ -5,6 +5,7 @@ services:
         autoconfigure: true
 
     Twig\Extra\Intl\IntlExtension: ~
+    Twig\Extra\String\StringExtension: ~
 
 twig:
     file_name_pattern: '*.twig'
