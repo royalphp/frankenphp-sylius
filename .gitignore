@@ -1,4 +1,5 @@
 /.idea/
+/public/assets/
 /public/media/
 /**/.DS_Store
 /**/Thumbs.db
