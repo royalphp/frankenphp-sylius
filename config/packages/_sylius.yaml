@@ -1,12 +1,9 @@
 imports:
-    - { resource: "@SyliusCoreBundle/Resources/config/app/config.yml" }
-
-    - { resource: "@SyliusAdminBundle/Resources/config/app/config.yml" }
-    - { resource: "@SyliusApiBundle/Resources/config/app/config.yaml" }
-
-    - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
-
-    - { resource: "@SyliusPayPalPlugin/Resources/config/config.yaml" }
+    - { resource: '@SyliusCoreBundle/Resources/config/app/config.yml' }
+    - { resource: '@SyliusAdminBundle/Resources/config/app/config.yml' }
+    - { resource: '@SyliusApiBundle/Resources/config/app/config.yaml' }
+    - { resource: '@SyliusShopBundle/Resources/config/app/config.yml' }
+    - { resource: '@SyliusPayPalPlugin/Resources/config/config.yaml' }
 
 parameters:
     locale: '%app.default_locale%'
@@ -271,7 +268,7 @@ sylius_theme:
         filesystem:
             scan_depth: 1
             directories:
-                - "%kernel.project_dir%/themes"
+                - '%kernel.project_dir%/themes'
 
 when@dev:
     sylius_api:

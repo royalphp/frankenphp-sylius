@@ -26,7 +26,7 @@ SYMFONY  = $(PHP) bin/console
 
 # Misc
 .DEFAULT_GOAL = help
-.PHONY        : help build up down start restart logs sh bash test composer vendor sf cc setup load_samples build_assets
+.PHONY        : help build up down start restart logs sh bash test composer vendor sf cc setup load_samples build_assets generate_configs
 
 ## —— 🎵 🐳 The Symfony Docker Makefile 🐳 🎵 ——————————————————————————————————
 help: ## Outputs this help screen
@@ -83,6 +83,7 @@ setup: ## Launching project by environment
 	make start
 	make load_samples
 	make build_assets
+	make generate_configs
 
 load_samples: ## Filling the database with dummy data
 ifeq ($(PROJECT_MODE), prod)
@@ -99,3 +100,6 @@ else
 	@$(NPM) ci
 	@$(NPM) run dev
 endif
+
+generate_configs: ## Generate configs for application operation
+	make sf c='lexik:jwt:generate-keypair --no-interaction --overwrite'
