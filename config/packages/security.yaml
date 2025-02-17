@@ -39,7 +39,7 @@ security:
                 path: sylius_admin_logout
                 target: sylius_admin_login
 
-        new_api_admin_user:
+        api_admin:
             pattern: "%sylius.security.api_admin_regex%/.*"
             provider: sylius_api_admin_user_provider
             stateless: true
@@ -52,7 +52,7 @@ security:
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
             jwt: true
 
-        new_api_shop_user:
+        api_shop:
             pattern: "%sylius.security.api_shop_regex%/.*"
             provider: sylius_api_shop_user_provider
             stateless: true
