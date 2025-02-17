@@ -12,28 +12,28 @@ A [Docker](https://docker.com)-based installer and runtime for the [Sylius](http
 
 ![CI](https://github.com/royalphp/frankenphp-sylius/workflows/CI/badge.svg)
 
+## Versions
+
+| Repository Branch | Repository Tag | Sylius Version | Symfony Compatibility | PHP Compatibility |
+|-------------------|----------------|----------------|-----------------------|-------------------|
+| `2.x`             | `0.2.*`        | `^2.0`         | `^7.2`                | `^8.3`            |
+| `1.x`             | `0.1.*`        | `^1.14`        | `^6.4`                | `^8.3`            |
+
 ## Getting Started
 
-All control is via `Makefile`, to see all available commands, run `make`.
-For a quick start, execute the following command:
+All control is via `Makefile`, to see all available commands, run `make`. For a quick start, execute the following command:
 
 ```shell
 make setup
 ```
 
-Under the hood, this command executes several other commands, 
-creates the necessary images, fills the database with samples data, and build assets for the client side, 
-all this is necessary for the first launch of the project, and in the future you will only `make up` or `make down` your project. 
+Under the hood, this command executes a few other commands needed to run your project for the first time,
+and you won't need this command again (unless you want to reconfigure your project).
 After successful execution of this command, you can open it in the browser at the standard url: https://localhost/
 
-By default, you're working in a development environment, so for most commands, the `PROJECT_MODE=dev` option is also executed.
-However, if you want to deploy your project to a production server, you need to explicitly specify this when executing commands 
-(as well as specify the necessary environment variables for your sensitive data), 
-for example, to quickly deploy in a production environment, execute the following command:
-
-```shell
-make setup PROJECT_MODE=prod
-```
+By default, you are working in a development environment, so `make` commands do not require additional options,
+however, if you want to deploy your project to a production server, or run any command in production,
+you explicitly need to specify the `PROJECT_MODE=prod` option, which defines the appropriate settings.
 
 ## Documentation
 
