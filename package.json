@@ -2,7 +2,7 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
-    "@sylius-ui/frontend": "^1.0"
+    "@sylius-ui/frontend": "^1.0.0"
   },
   "scripts": {
     "dev-server": "encore dev-server",
