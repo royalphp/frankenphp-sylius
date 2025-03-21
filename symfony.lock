@@ -213,13 +213,18 @@
         ]
     },
     "sylius/resource-bundle": {
-        "version": "1.10",
+        "version": "1.12",
         "recipe": {
             "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
-            "version": "1.9",
-            "ref": "ee21c1fc90778f4b01c20e72c320cc34f8839c1e"
-        }
+            "version": "1.12",
+            "ref": "cde8dd6145be3135af63787aa5c5858c3f289c7a"
+        },
+        "files": [
+            "config/packages/sylius_resource.yaml",
+            "config/routes/sylius_resource.yaml",
+            "src/Entity/.gitignore"
+        ]
     },
     "sylius/theme-bundle": {
         "version": "v2.3.0"
