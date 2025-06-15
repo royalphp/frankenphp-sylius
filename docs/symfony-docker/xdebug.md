@@ -9,13 +9,13 @@ It can be enabled by setting the `XDEBUG_MODE` environment variable to `debug`.
 On Linux and Mac:
 
 ```
-XDEBUG_MODE=debug docker compose up -d
+XDEBUG_MODE=debug docker compose up --wait
 ```
 
 On Windows:
 
 ```
-set XDEBUG_MODE=debug&& docker compose up -d&set XDEBUG_MODE=
+set XDEBUG_MODE=debug&& docker compose up --wait&set XDEBUG_MODE=
 ```
 
 ## Debugging with Xdebug and PHPStorm
@@ -48,24 +48,29 @@ You can now use the debugger!
 
 ## Debugging with Xdebug and VScode
 
-1. Install necessery [PHP extension for VScode](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode).
-2. Add [debug configuration](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations) into your `.vscode\launch.json` file.
+1. Install necessary [PHP extension for VScode](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode).
+2. Add [debug configuration](https://code.visualstudio.com/docs/debugtest/debugging-configuration#_launch-configurations) into your `.vscode\launch.json` file.
 
     Example:
     
     ```
     {
-        "name": "Listen for Xdebug",
-        "type": "php",
-        "request": "launch",
-        "port": 9003,
-        "pathMappings": {
-            "/app": "${workspaceFolder}"
-        }
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Listen for Xdebug",
+                "type": "php",
+                "request": "launch",
+                "port": 9003,
+                "pathMappings": {
+                    "/app": "${workspaceFolder}"
+                }
+            }
+        ]
     }
     ```
     
-3. Use [Run and Debug](https://code.visualstudio.com/docs/editor/debugging) options and run  `Listen for Xdebug` command to listen for upcomming connections with [the **Xdebug extension**](https://xdebug.org/docs/step_debug#browser-extensions) installed and active.
+3. Use [Run and Debug](https://code.visualstudio.com/docs/debugtest/debugging#_start-a-debugging-session) options and run  `Listen for Xdebug` command to listen for upcomming connections with [the **Xdebug extension**](https://xdebug.org/docs/step_debug#browser-extensions) installed and active.
 
 ## Troubleshooting
 
