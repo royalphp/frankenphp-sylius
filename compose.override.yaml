@@ -33,7 +33,7 @@ services:
     tty: true
 
   node:
-    image: node:22-alpine
+    image: node:24-alpine
     working_dir: /app
     volumes:
       - ./:/app
