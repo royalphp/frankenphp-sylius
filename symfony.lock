@@ -25,6 +25,15 @@
             "ref": "64d8583af5ea57b7afa4aba4b159907f3a148b05"
         }
     },
+    "doctrine/deprecations": {
+        "version": "1.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "87424683adc81d7dc305eefec1fced883084aab9"
+        }
+    },
     "doctrine/doctrine-bundle": {
         "version": "2.11",
         "recipe": {
@@ -75,6 +84,18 @@
     },
     "knplabs/knp-menu-bundle": {
         "version": "v3.4.1"
+    },
+    "knplabs/knp-snappy-bundle": {
+        "version": "1.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.5",
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        },
+        "files": [
+            "config/packages/knp_snappy.yaml"
+        ]
     },
     "league/flysystem-bundle": {
         "version": "2.4",
@@ -199,6 +220,19 @@
     "sylius/mailer-bundle": {
         "version": "v2.0.0"
     },
+    "sylius/mollie-plugin": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "5c75284ff135abe33187e0fe195cf6dcd47207f9"
+        },
+        "files": [
+            "config/packages/sylius_mollie.yaml",
+            "config/routes/sylius_mollie.yaml"
+        ]
+    },
     "sylius/paypal-plugin": {
         "version": "1.7",
         "recipe": {
@@ -210,6 +244,19 @@
         "files": [
             "config/packages/sylius_paypal.yaml",
             "config/routes/sylius_paypal.yaml"
+        ]
+    },
+    "sylius/refund-plugin": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "0.4",
+            "ref": "a3f813f608c6f04bd7d0b4cefd73a96bf378c390"
+        },
+        "files": [
+            "config/packages/sylius_refund.yaml",
+            "config/routes/sylius_refund.yaml"
         ]
     },
     "sylius/resource-bundle": {
@@ -461,6 +508,18 @@
             "version": "2.0",
             "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
         }
+    },
+    "willdurand/js-translation-bundle": {
+        "version": "5.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "02b720a49f6d36b44d557e0b18e48bf09e0a8e07"
+        },
+        "files": [
+            "config/routes/js_translation.yaml"
+        ]
     },
     "winzou/state-machine-bundle": {
         "version": "v0.6.1"

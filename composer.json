@@ -25,6 +25,7 @@
         "ext-iconv": "*",
         "dragonmantank/cron-expression": "^3.4",
         "runtime/frankenphp-symfony": "^0.2.0",
+        "sylius/mollie-plugin": "^2.2",
         "sylius/paypal-plugin": "^1.7",
         "sylius/sylius": "^1.14",
         "symfony/console": "6.4.*",
