@@ -16,7 +16,7 @@ A [Docker](https://docker.com)-based installer and runtime for the [Sylius](http
 
 | Repository Branch | Repository Tag | Sylius Version | Symfony Compatibility | PHP Compatibility |
 |-------------------|----------------|----------------|-----------------------|-------------------|
-| `2.x`             | `0.2.*`        | `^2.0`         | `^7.2`                | `^8.3`            |
+| `2.x`             | `0.2.*`        | `^2.1`         | `^7.3`                | `^8.4`            |
 | `1.x`             | `0.1.*`        | `^1.14`        | `^6.4`                | `^8.3`            |
 
 ## Getting Started

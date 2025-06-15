@@ -5,11 +5,17 @@
     "@hotwired/stimulus": "^3.2",
     "@sylius-ui/admin": "file:vendor/sylius/sylius/src/Sylius/Bundle/AdminBundle",
     "@sylius-ui/shop": "file:vendor/sylius/sylius/src/Sylius/Bundle/ShopBundle",
-    "@symfony/stimulus-bridge": "^3.2",
+    "@sylius/admin-bundle": "file:vendor/sylius/sylius/src/Sylius/Bundle/AdminBundle/Resources/assets",
+    "@sylius/shop-bundle": "file:vendor/sylius/sylius/src/Sylius/Bundle/ShopBundle/Resources/assets",
     "@symfony/ux-autocomplete": "file:vendor/symfony/ux-autocomplete/assets",
     "@symfony/ux-live-component": "file:vendor/symfony/ux-live-component/assets",
-    "@symfony/webpack-encore": "^5.0",
-    "tom-select": "^2.4"
+    "@symfony/stimulus-bridge": "^3.2",
+    "@symfony/webpack-encore": "^5.1",
+    "bazinga-translator": "^7.0.0",
+    "intl-messageformat": "^10.7.16",
+    "lodash.get": "^4.4.2",
+    "shepherd.js": "11.0",
+    "tom-select": "^2.2.2"
   },
   "scripts": {
     "dev-server": "encore dev-server",
