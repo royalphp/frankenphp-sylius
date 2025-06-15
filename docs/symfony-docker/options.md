@@ -13,10 +13,10 @@ For instance, use the following command to install Symfony 6.4:
 
 On Linux:
 
-    SYMFONY_VERSION=6.4.* docker compose up -d --wait
+    SYMFONY_VERSION=6.4.* docker compose up --wait
 On Windows:
 
-    set SYMFONY_VERSION=6.4.* && docker compose up -d --wait&set SYMFONY_VERSION=
+    set SYMFONY_VERSION=6.4.* && docker compose up --wait&set SYMFONY_VERSION=
 
 ## Installing Development Versions of Symfony
 
@@ -27,17 +27,17 @@ For instance, use the following command to use the development branch of Symfony
 
 On Linux:
 
-    STABILITY=dev docker compose up -d --wait
+    STABILITY=dev docker compose up --wait
 
 On Windows:
     
-    set STABILITY=dev && docker compose up -d --wait&set STABILITY=
+    set STABILITY=dev && docker compose up --wait&set STABILITY=
 
 ## Using custom HTTP ports
 
 Use the environment variables `HTTP_PORT`, `HTTPS_PORT` and/or `HTTP3_PORT` to adjust the ports to your needs, e.g.
 
-    HTTP_PORT=8000 HTTPS_PORT=4443 HTTP3_PORT=4443 docker compose up -d --wait
+    HTTP_PORT=8000 HTTPS_PORT=4443 HTTP3_PORT=4443 docker compose up --wait
 
 to access your application on [https://localhost:4443](https://localhost:4443).
 
@@ -60,7 +60,7 @@ You can also customize the `Caddyfile` by using the following environment variab
 | `CADDY_SERVER_LOG_OPTIONS`      | the [server log options block](https://caddyserver.com/docs/caddyfile/directives/log), one per line                                                                                     |                           |
 | `SERVER_NAME`                   | the server name or address                                                                                                                                                              | `localhost`               |
 | `FRANKENPHP_CONFIG`             | a list of extra [FrankenPHP directives](https://frankenphp.dev/docs/config/#caddyfile-config), one per line                                                                             | `import worker.Caddyfile` | 
-| `MERCURE_TRANSPORT_URL`         | the value passed to the `transport_url` directive                                                                                                                                       | `bolt://mercure.db`       |
+| `MERCURE_TRANSPORT_URL`         | the value passed to the `transport_url` directive                                                                                                                                       | `bolt:///data/mercure.db` |
 | `MERCURE_PUBLISHER_JWT_KEY`     | the JWT key to use for publishers                                                                                                                                                       |                           |
 | `MERCURE_PUBLISHER_JWT_ALG`     | the JWT algorithm to use for publishers                                                                                                                                                 | `HS256`                   |
 | `MERCURE_SUBSCRIBER_JWT_KEY`    | the JWT key to use for subscribers                                                                                                                                                      |                           |
@@ -69,4 +69,4 @@ You can also customize the `Caddyfile` by using the following environment variab
 
 ### Example of server name customize:
 
-    SERVER_NAME="app.localhost" docker compose up -d --wait
+    SERVER_NAME="app.localhost" docker compose up --wait

@@ -34,7 +34,7 @@ For instance, to use self-signed certificates created with [mkcert](https://gith
         # ...
       volumes:
     +    - ./frankenphp/certs:/etc/caddy/certs:ro
-        - ./public:/app/public:ro
+        # ...
     ```
 5. Restart your `php` service
 
@@ -45,7 +45,7 @@ To disable HTTPS, configure your environment to use HTTP by setting the followin
 ```bash
 SERVER_NAME=http://localhost \
 MERCURE_PUBLIC_URL=http://localhost/.well-known/mercure \
-docker compose up --pull always -d --wait
+docker compose up --wait
 ```
 
 Ensure your application is accessible over HTTP by visiting `http://localhost` in your web browser.
