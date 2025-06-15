@@ -25,13 +25,22 @@
             "ref": "64d8583af5ea57b7afa4aba4b159907f3a148b05"
         }
     },
+    "doctrine/deprecations": {
+        "version": "1.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "87424683adc81d7dc305eefec1fced883084aab9"
+        }
+    },
     "doctrine/doctrine-bundle": {
-        "version": "2.11",
+        "version": "2.14",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "2.10",
-            "ref": "c170ded8fc587d6bd670550c43dafcf093762245"
+            "ref": "d1778a69711a9b06bb4e202977ca6c4a0d16933d"
         },
         "files": [
             "config/packages/doctrine.yaml",
@@ -75,6 +84,18 @@
     },
     "knplabs/knp-menu-bundle": {
         "version": "v3.4.1"
+    },
+    "knplabs/knp-snappy-bundle": {
+        "version": "1.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.5",
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        },
+        "files": [
+            "config/packages/knp_snappy.yaml"
+        ]
     },
     "league/flysystem-bundle": {
         "version": "2.4",
@@ -144,15 +165,16 @@
         ]
     },
     "phpunit/phpunit": {
-        "version": "12.0",
+        "version": "12.2",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "10.0",
-            "ref": "b786e93f0b38027289867faca488b8c511436fe0"
+            "version": "11.1",
+            "ref": "c6658a60fc9d594805370eacdf542c3d6b5c0869"
         },
         "files": [
             ".env.test",
+            "bin/phpunit",
             "phpunit.dist.xml",
             "tests/bootstrap.php"
         ]
@@ -199,6 +221,19 @@
     "sylius/mailer-bundle": {
         "version": "v2.0.0"
     },
+    "sylius/mollie-plugin": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "5c75284ff135abe33187e0fe195cf6dcd47207f9"
+        },
+        "files": [
+            "config/packages/sylius_mollie.yaml",
+            "config/routes/sylius_mollie.yaml"
+        ]
+    },
     "sylius/paypal-plugin": {
         "version": "1.7",
         "recipe": {
@@ -210,6 +245,19 @@
         "files": [
             "config/packages/sylius_paypal.yaml",
             "config/routes/sylius_paypal.yaml"
+        ]
+    },
+    "sylius/refund-plugin": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "0.4",
+            "ref": "a3f813f608c6f04bd7d0b4cefd73a96bf378c390"
+        },
+        "files": [
+            "config/packages/sylius_refund.yaml",
+            "config/routes/sylius_refund.yaml"
         ]
     },
     "sylius/resource-bundle": {
@@ -331,19 +379,14 @@
         ]
     },
     "symfony/phpunit-bridge": {
-        "version": "7.0",
+        "version": "7.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "6.3",
-            "ref": "a411a0480041243d97382cac7984f7dce7813c08"
+            "version": "7.3",
+            "ref": "dc13fec96bd527bd399c3c01f0aab915c67fd544"
         },
-        "files": [
-            ".env.test",
-            "bin/phpunit",
-            "phpunit.xml.dist",
-            "tests/bootstrap.php"
-        ]
+        "files": []
     },
     "symfony/routing": {
         "version": "6.4",
@@ -377,7 +420,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "6.3",
-            "ref": "e28e27f53663cc34f0be2837aba18e3a1bef8e7b"
+            "ref": "620a1b84865ceb2ba304c8f8bf2a185fbf32a843"
         },
         "files": [
             "config/packages/translation.yaml",
@@ -461,6 +504,18 @@
             "version": "2.0",
             "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
         }
+    },
+    "willdurand/js-translation-bundle": {
+        "version": "5.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "02b720a49f6d36b44d557e0b18e48bf09e0a8e07"
+        },
+        "files": [
+            "config/routes/js_translation.yaml"
+        ]
     },
     "winzou/state-machine-bundle": {
         "version": "v0.6.1"

@@ -13,6 +13,13 @@ security:
         sylius_api_shop_user_provider:
             id: sylius.shop_user_provider.email_or_name_based
     firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        image_resolver:
+            pattern: ^/media/cache/resolve
+            security: false
+
         admin:
             switch_user: true
             context: admin
@@ -38,33 +45,6 @@ security:
             logout:
                 path: sylius_admin_logout
                 target: sylius_admin_login
-
-        api_admin:
-            pattern: "%sylius.security.api_admin_regex%/.*"
-            provider: sylius_api_admin_user_provider
-            stateless: true
-            entry_point: jwt
-            json_login:
-                check_path: "%sylius.security.api_admin_route%/administrators/token"
-                username_path: email
-                password_path: password
-                success_handler: lexik_jwt_authentication.handler.authentication_success
-                failure_handler: lexik_jwt_authentication.handler.authentication_failure
-            jwt: true
-
-        api_shop:
-            pattern: "%sylius.security.api_shop_regex%/.*"
-            provider: sylius_api_shop_user_provider
-            stateless: true
-            entry_point: jwt
-            json_login:
-                check_path: "%sylius.security.api_shop_route%/customers/token"
-                username_path: email
-                password_path: password
-                success_handler: lexik_jwt_authentication.handler.authentication_success
-                failure_handler: lexik_jwt_authentication.handler.authentication_failure
-            jwt: true
-
         shop:
             switch_user: { role: ROLE_ALLOWED_TO_SWITCH }
             context: shop
@@ -93,13 +73,30 @@ security:
                 target: sylius_shop_homepage
                 invalidate_session: false
 
-        image_resolver:
-            pattern: ^/media/cache/resolve
-            security: false
-
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+        api_admin:
+            pattern: "%sylius.security.api_admin_regex%/.*"
+            provider: sylius_api_admin_user_provider
+            stateless: true
+            entry_point: jwt
+            json_login:
+                check_path: "%sylius.security.api_admin_route%/administrators/token"
+                username_path: email
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            jwt: true
+        api_shop:
+            pattern: "%sylius.security.api_shop_regex%/.*"
+            provider: sylius_api_shop_user_provider
+            stateless: true
+            entry_point: jwt
+            json_login:
+                check_path: "%sylius.security.api_shop_route%/customers/token"
+                username_path: email
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            jwt: true
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

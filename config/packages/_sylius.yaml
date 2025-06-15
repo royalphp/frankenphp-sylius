@@ -4,6 +4,8 @@ imports:
     - { resource: '@SyliusApiBundle/Resources/config/app/config.yaml' }
     - { resource: '@SyliusShopBundle/Resources/config/app/config.yml' }
     - { resource: '@SyliusPayPalPlugin/Resources/config/config.yaml' }
+    - { resource: "@SyliusRefundPlugin/Resources/config/app/config.yml" }
+    - { resource: "@SyliusMolliePlugin/config/config.yaml" }
 
 parameters:
     locale: '%app.default_locale%'
@@ -269,6 +271,10 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - '%kernel.project_dir%/themes'
+
+sylius_refund:
+    pdf_generator:
+        enabled: false
 
 when@dev:
     sylius_api:
