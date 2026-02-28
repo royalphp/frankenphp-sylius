@@ -6,6 +6,7 @@ imports:
     - { resource: '@SyliusPayPalPlugin/Resources/config/config.yaml' }
     - { resource: "@SyliusRefundPlugin/Resources/config/app/config.yml" }
     - { resource: "@SyliusMolliePlugin/config/config.yaml" }
+    - { resource: "@SyliusAdyenPlugin/config/config.yaml" }
 
 parameters:
     locale: '%app.default_locale%'

@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6d8b24788f87dc06ee263db3cb5f367",
+    "content-hash": "880f06429b321e9e542ba0997ea35595",
     "packages": [
+        {
+            "name": "adyen/php-api-library",
+            "version": "v28.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Adyen/adyen-php-api-library.git",
+                "reference": "852e733b11738809d2315ab459a9074eeea42e2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Adyen/adyen-php-api-library/zipball/852e733b11738809d2315ab459a9074eeea42e2a",
+                "reference": "852e733b11738809d2315ab459a9074eeea42e2a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "dms/phpunit-arraysubset-asserts": "0.5.0",
+                "friendsofphp/php-cs-fixer": "*",
+                "php-coveralls/php-coveralls": "2.7.0",
+                "phpunit/phpunit": "9.6.23",
+                "squizlabs/php_codesniffer": "3.10.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Adyen\\": "src/Adyen/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP client library for accessing Adyen APIs",
+            "homepage": "https://github.com/Adyen/adyen-php-api-library",
+            "keywords": [
+                "adyen"
+            ],
+            "support": {
+                "issues": "https://github.com/Adyen/adyen-php-api-library/issues",
+                "source": "https://github.com/Adyen/adyen-php-api-library/tree/v28.3.0"
+            },
+            "time": "2025-10-22T16:17:09+00:00"
+        },
         {
             "name": "alcohol/iso4217",
             "version": "4.3.0",
@@ -561,6 +611,79 @@
                 }
             ],
             "time": "2025-12-08T15:06:51+00:00"
+        },
+        {
+            "name": "composer/package-versions-deprecated",
+            "version": "1.11.99.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/package-versions-deprecated.git",
+                "reference": "b4f54f74ef3453349c24a845d22392cd31e65f1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/b4f54f74ef3453349c24a845d22392cd31e65f1d",
+                "reference": "b4f54f74ef3453349c24a845d22392cd31e65f1d",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1.0 || ^2.0",
+                "php": "^7 || ^8"
+            },
+            "replace": {
+                "ocramius/package-versions": "1.11.99"
+            },
+            "require-dev": {
+                "composer/composer": "^1.9.3 || ^2.0@dev",
+                "ext-zip": "^1.13",
+                "phpunit/phpunit": "^6.5 || ^7"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PackageVersions\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PackageVersions\\": "src/PackageVersions"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be"
+                }
+            ],
+            "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
+            "support": {
+                "issues": "https://github.com/composer/package-versions-deprecated/issues",
+                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.5"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-01-17T14:14:24+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -7325,6 +7448,96 @@
                 "source": "https://github.com/SyliusLabs/PolyfillSymfonySecurity/tree/v1.1.2"
             },
             "time": "2022-12-12T13:28:33+00:00"
+        },
+        {
+            "name": "sylius/adyen-plugin",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/AdyenPlugin.git",
+                "reference": "a5a0892c50972cd6e592e8df2bbeec7f82b0258d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/AdyenPlugin/zipball/a5a0892c50972cd6e592e8df2bbeec7f82b0258d",
+                "reference": "a5a0892c50972cd6e592e8df2bbeec7f82b0258d",
+                "shasum": ""
+            },
+            "require": {
+                "adyen/php-api-library": "^28.0",
+                "composer/package-versions-deprecated": "^1.11",
+                "php": "^8.1",
+                "sylius/refund-plugin": "^1.6",
+                "sylius/sylius": "^1.14",
+                "sylius/telemetry": "^1.0",
+                "symfony/messenger": "^5.4.21 || ^6.4",
+                "symfony/serializer": "^5.4.21 || ^6.4",
+                "symfony/webpack-encore-bundle": "^1.15"
+            },
+            "conflict": {
+                "liip/imagine-bundle": "2.17.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.6.1",
+                "dmore/behat-chrome-extension": "^1.3",
+                "dmore/chrome-mink-driver": "^2.7",
+                "friends-of-behat/mink": "^1.8",
+                "friends-of-behat/mink-browserkit-driver": "^1.4",
+                "friends-of-behat/mink-extension": "^2.4",
+                "friends-of-behat/page-object-extension": "^0.3",
+                "friends-of-behat/suite-settings-extension": "^1.0",
+                "friends-of-behat/symfony-extension": "^2.1",
+                "friends-of-behat/variadic-extension": "^1.3",
+                "lakion/mink-debug-extension": "^2.0.0",
+                "nyholm/psr7": "^1.8",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.4",
+                "phpstan/phpstan-doctrine": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpstan/phpstan-webmozart-assert": "^1.0",
+                "phpunit/phpunit": "^10.5",
+                "polishsymfonycommunity/symfony-mocker-container": "^1.0",
+                "sylius-labs/coding-standard": "^4.0",
+                "sylius/test-application": "^1.14.0@alpha",
+                "symfony/browser-kit": "^5.4.21 || ^6.4",
+                "symfony/debug-bundle": "^5.4.21 || ^6.4",
+                "symfony/dotenv": "^5.4.21 || ^6.4",
+                "symfony/intl": "^5.4.21 || ^6.4",
+                "symfony/web-profiler-bundle": "^5.4.21 || ^6.4"
+            },
+            "type": "sylius-plugin",
+            "extra": {
+                "public-dir": "vendor/sylius/test-application/public",
+                "branch-alias": {
+                    "dev-1.0": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\AdyenPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Adyen payment plugin for Sylius applications.",
+            "keywords": [
+                "adyen",
+                "sylius",
+                "sylius-plugin"
+            ],
+            "support": {
+                "issues": "https://github.com/Sylius/AdyenPlugin/issues",
+                "source": "https://github.com/Sylius/AdyenPlugin/tree/v1.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sylius",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-02-03T11:56:58+00:00"
         },
         {
             "name": "sylius/calendar",
