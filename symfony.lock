@@ -266,7 +266,7 @@
             "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
             "version": "1.12",
-            "ref": "cde8dd6145be3135af63787aa5c5858c3f289c7a"
+            "ref": "14f5b4ce9f7b17390563bec18170836d6d8bed78"
         },
         "files": [
             "config/packages/sylius_resource.yaml",
