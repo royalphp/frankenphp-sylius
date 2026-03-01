@@ -73,5 +73,12 @@ jobs:
         env:
           GITHUB_ACTIONS_CONFIG_FILE: actionlint.yaml
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_CHECKOV: false
-          VALIDATE_TRIVY: false
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_DOCKERFILE_HADOLINT: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_BASH: true
+          VALIDATE_YAML: true
+          VALIDATE_JSON: true
+          VALIDATE_HTML: true
+          VALIDATE_ENV: true
+          VALIDATE_XML: true
