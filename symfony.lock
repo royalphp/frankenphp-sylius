@@ -165,12 +165,12 @@
         ]
     },
     "phpunit/phpunit": {
-        "version": "12.2",
+        "version": "12.5",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "11.1",
-            "ref": "c6658a60fc9d594805370eacdf542c3d6b5c0869"
+            "ref": "1117deb12541f35793eec9fff7494d7aa12283fc"
         },
         "files": [
             ".env.test",
@@ -208,6 +208,19 @@
     },
     "sylius-labs/doctrine-migrations-extra-bundle": {
         "version": "v0.2.0"
+    },
+    "sylius/adyen-plugin": {
+        "version": "1.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "889fec7dbf7f08e4a93899b8553b19e33fd7c3c9"
+        },
+        "files": [
+            "config/packages/sylius_adyen.yaml",
+            "config/routes/sylius_adyen.yaml"
+        ]
     },
     "sylius/calendar": {
         "version": "v0.5.0"
@@ -266,7 +279,7 @@
             "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
             "version": "1.12",
-            "ref": "cde8dd6145be3135af63787aa5c5858c3f289c7a"
+            "ref": "14f5b4ce9f7b17390563bec18170836d6d8bed78"
         },
         "files": [
             "config/packages/sylius_resource.yaml",
@@ -360,19 +373,19 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "6.0",
-            "ref": "ba1ac4e919baba5644d31b57a3284d6ba12d52ee"
+            "ref": "d8936e2e2230637ef97e5eecc0eea074eecae58b"
         },
         "files": [
             "config/packages/messenger.yaml"
         ]
     },
     "symfony/monolog-bundle": {
-        "version": "3.10",
+        "version": "3.11",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "3.7",
-            "ref": "aff23899c4440dd995907613c1dd709b6f59503f"
+            "ref": "1b9efb10c54cb51c713a9391c9300ff8bceda459"
         },
         "files": [
             "config/packages/monolog.yaml"
@@ -470,8 +483,8 @@
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "1.10",
-            "ref": "6642c5eeebbd06268826e7f9fbee721cba1d7d77"
+            "version": "1.17",
+            "ref": "eeb7f3bae6214a0cee8f48310f14e48f5cf90ba3"
         },
         "files": [
             "assets/app.js",

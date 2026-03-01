@@ -107,9 +107,9 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: "%sylius.security.admin_regex%/_partial", role: PUBLIC_ACCESS, ips: [ 127.0.0.1, ::1 ] }
+        - { path: "%sylius.security.admin_regex%/_partial", role: PUBLIC_ACCESS, ips: [ "127.0.0.1", "::1" ] }
         - { path: "%sylius.security.admin_regex%/_partial", role: ROLE_NO_ACCESS }
-        - { path: "%sylius.security.shop_regex%/_partial", role: PUBLIC_ACCESS, ips: [ 127.0.0.1, ::1 ] }
+        - { path: "%sylius.security.shop_regex%/_partial", role: PUBLIC_ACCESS, ips: [ "127.0.0.1", "::1" ] }
         - { path: "%sylius.security.shop_regex%/_partial", role: ROLE_NO_ACCESS }
 
         - { path: "%sylius.security.admin_regex%/forgotten-password", role: PUBLIC_ACCESS }
