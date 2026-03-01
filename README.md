@@ -1,6 +1,6 @@
 # Sylius FrankenPHP Edition by RoyalPHP
 
-###### This edition is based on the Sylius Standard Edition.
+This edition is based on the Sylius Standard Edition.
 
 ![Starting point for Sylius eCommerce powered by FrankenPHP](docs/frankenphp-sylius-logo.png)
 
@@ -47,7 +47,7 @@ If you want to report a bug or suggest an idea, please use [GitHub issues](https
 
 ## License
 
-This theme uses [MIT License](LICENSE.md).
+This theme uses [MIT License](LICENSE).
 
 ## Authors
 
