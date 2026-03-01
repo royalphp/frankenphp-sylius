@@ -207,12 +207,12 @@
         ]
     },
     "sylius/resource-bundle": {
-        "version": "1.12",
+        "version": "1.14",
         "recipe": {
             "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
-            "version": "1.12",
-            "ref": "cde8dd6145be3135af63787aa5c5858c3f289c7a"
+            "version": "1.13",
+            "ref": "44983507fd82e1b5ec6911cb7be8847064acd473"
         },
         "files": [
             "config/packages/sylius_resource.yaml",
