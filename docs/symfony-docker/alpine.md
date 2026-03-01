@@ -8,22 +8,21 @@ are known to be slower, and have several known issues.
 
 To switch to Alpine-based images, apply the following changes to the `Dockerfile`:
 
-```patch
--FROM dunglas/frankenphp:1-php8.3 AS frankenphp_upstream
-+FROM dunglas/frankenphp:1-php8.3-alpine AS frankenphp_upstream
+<!-- markdownlint-disable MD010 -->
+
+```diff
+-FROM dunglas/frankenphp:1-php8.4 AS frankenphp_upstream
++FROM dunglas/frankenphp:1-php8.4-alpine AS frankenphp_upstream
 
 -# hadolint ignore=DL3008
 -RUN apt-get update && apt-get install -y --no-install-recommends \
--	acl \
 -	file \
--	gettext \
 -	git \
 -	&& rm -rf /var/lib/apt/lists/*
 +# hadolint ignore=DL3018
 +RUN apk add --no-cache \
-+		acl \
-+		file \
-+		gettext \
-+		git \
-+	;
++	file \
++	git
 ```
+
+<!-- markdownlint-enable MD010 -->
