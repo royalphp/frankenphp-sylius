@@ -2,6 +2,7 @@ security:
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: auto
+
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
         sylius_admin_user_provider:
@@ -12,7 +13,13 @@ security:
             id: sylius.shop_user_provider.email_or_name_based
         sylius_api_shop_user_provider:
             id: sylius.shop_user_provider.email_or_name_based
+
     firewalls:
+        dev:
+            # Ensure dev tools and static assets are always allowed
+            pattern: ^/(_profiler|_wdt|assets|build|media)/
+            security: false
+
         admin:
             switch_user: true
             context: admin
@@ -103,22 +110,7 @@ security:
                 target: sylius_shop_homepage
                 invalidate_session: false
 
-        image_resolver:
-            pattern: ^/media/cache/resolve
-            security: false
-
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
-            # activate different ways to authenticate
-            # https://symfony.com/doc/current/security.html#the-firewall
-
-            # https://symfony.com/doc/current/security/impersonating_user.html
-            # switch_user: true
-
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
+    # Note: Only the *first* matching rule is applied
     access_control:
         - { path: "%sylius.security.admin_regex%/forgotten-password", role: PUBLIC_ACCESS }
 
@@ -141,8 +133,6 @@ security:
 when@test:
     security:
         password_hashers:
-            # By default, password hashers are resource intensive and take time. This is
-            # important to generate secure password hashes. In tests however, secure hashes
-            # are not important, waste resources and increase test times. The following
-            # reduces the work factor to the lowest possible values.
+            # Password hashers are resource-intensive by design to ensure security.
+            # In tests, it's safe to reduce their cost to improve performance.
             Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: plaintext
