@@ -3,6 +3,10 @@
 A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework,
 with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) inside!
 
+Specially tailored for coding agents: ships with a [Dev Container](https://containers.dev/) configuration
+that lets [Claude Code](https://claude.ai/claude-code) (and other AI coding assistants) run in fully autonomous
+mode inside a sandboxed environment.
+
 ![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
 
 ## Getting Started
@@ -17,14 +21,18 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 
 - Production, development and CI ready
 - Just 1 service by default
+- Super-readable configuration
 - Blazing-fast performance thanks to [the worker mode of FrankenPHP](https://frankenphp.dev/docs/worker/)
-- [Installation of extra Docker Compose services](docs/extra-services.md) with Symfony Flex
+- [Installation of extra Docker Compose services](extra-services.md) with Symfony Flex
 - Automatic HTTPS (in dev and prod)
 - HTTP/3 and [Early Hints](https://symfony.com/blog/new-in-symfony-6-3-early-hints) support
 - Real-time messaging thanks to a built-in [Mercure hub](https://symfony.com/doc/current/mercure.html)
 - [Vulcain](https://vulcain.rocks) support
-- Native [XDebug](docs/xdebug.md) integration
-- Super-readable configuration
+- Native [XDebug](xdebug.md) integration
+- [Hot Reloading](https://frankenphp.dev/docs/hot-reload/)
+- [Dev Container](https://containers.dev/) support, optimized for AI coding agents
+- [AI coding agents](agents.md) with sandboxing out of the box
+- Rootless, slim production image
 
 **Enjoy!**
 
@@ -41,6 +49,7 @@ with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) 
 9. [Using a Makefile](makefile.md)
 10. [Updating the template](updating.md)
 11. [Troubleshooting](troubleshooting.md)
+12. [Using AI Coding Agents](agents.md)
 
 ## License
 
