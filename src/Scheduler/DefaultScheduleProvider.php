@@ -25,8 +25,6 @@ final readonly class DefaultScheduleProvider implements ScheduleProviderInterfac
             ->add(
                 RecurringMessage::cron('* * * * *', new RunCommandMessage('sylius:remove-expired-carts')),
                 RecurringMessage::cron('* * * * *', new RunCommandMessage('sylius:cancel-unpaid-orders')),
-                RecurringMessage::cron('* * * * *', new RunCommandMessage('sylius:promotion:generate-coupons')),
-                RecurringMessage::cron('* * * * *', new RunCommandMessage('mollie:send-payment-link')),
             )
             ->stateful($this->cache)
         ;
