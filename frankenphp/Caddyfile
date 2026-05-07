@@ -5,12 +5,6 @@
 
 	frankenphp {
 		{$FRANKENPHP_CONFIG}
-
-		worker {
-			file ./public/index.php
-			env APP_RUNTIME Runtime\FrankenPhpSymfony\Runtime
-			{$FRANKENPHP_WORKER_CONFIG}
-		}
 	}
 }
 
@@ -57,7 +51,15 @@
 	rewrite @phpRoute index.php
 
 	@frontController path index.php
-	php @frontController
+	php @frontController {
+		{$FRANKENPHP_SITE_CONFIG}
+
+		worker {
+			file ./public/index.php
+			env APP_RUNTIME Runtime\FrankenPhpSymfony\Runtime
+			{$FRANKENPHP_WORKER_CONFIG}
+		}
+	}
 
 	file_server {
 		hide *.php
