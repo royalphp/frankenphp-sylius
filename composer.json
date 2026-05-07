@@ -33,7 +33,7 @@
         "symfony/framework-bundle": "7.4.*",
         "symfony/monolog-bundle": "^3.11.2",
         "symfony/runtime": "7.4.*",
-        "symfony/scheduler": "7.4.*",
+        "symfony/scheduler": "8.0.*",
         "symfony/yaml": "7.4.*"
     },
     "require-dev": {
