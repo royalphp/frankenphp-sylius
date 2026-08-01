@@ -2,6 +2,7 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
+    "@adyen/adyen-web": "^6.41.1",
     "@hotwired/stimulus": "^3.2",
     "@sylius-ui/admin": "file:vendor/sylius/sylius/src/Sylius/Bundle/AdminBundle",
     "@sylius-ui/shop": "file:vendor/sylius/sylius/src/Sylius/Bundle/ShopBundle",
