@@ -6,11 +6,15 @@ imports:
     - { resource: '@SyliusApiBundle/Resources/config/app/config.yaml' }
     - { resource: '@SyliusPayPalPlugin/config/config.yaml' }
     - { resource: "@SyliusMolliePlugin/config/config.yaml" }
+    - { resource: "@SyliusAdyenPlugin/config/config.yaml" }
+    - { resource: "@SyliusRefundPlugin/config/config.yaml" }
+    - { resource: "@FluxSESyliusStripePlugin/config/config.yaml" }
 
 parameters:
     locale: '%app.default_locale%'
     currency: '%app.default_currency%'
     sylius_core.public_dir: '%kernel.project_dir%/public'
+    sylius_refund.supported_gateways: ['offline', 'adyen']
 
 sylius_addressing:
     resources:
@@ -302,6 +306,17 @@ sylius_theme:
             scan_depth: 1
             directories:
                 - '%kernel.project_dir%/themes'
+
+sylius_refund:
+    pdf_generator:
+        legacy: false
+
+sylius_pdf_generation:
+    default:
+        adapter: dompdf
+    contexts:
+        sylius_refund:
+            adapter: dompdf
 
 when@dev:
     sylius_api:

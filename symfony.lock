@@ -52,6 +52,19 @@
             "migrations/.gitignore"
         ]
     },
+    "flux-se/sylius-stripe-plugin": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "1f4886c87aa941815a8b382af97e4110ce08fe3a"
+        },
+        "files": [
+            "config/packages/sylius_stripe.yaml",
+            "config/routes/sylius_stripe.yaml"
+        ]
+    },
     "friendsofsymfony/rest-bundle": {
         "version": "3.8",
         "recipe": {
@@ -69,6 +82,18 @@
     },
     "knplabs/knp-menu-bundle": {
         "version": "v3.5.0"
+    },
+    "knplabs/knp-snappy-bundle": {
+        "version": "1.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.5",
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        },
+        "files": [
+            "config/packages/knp_snappy.yaml"
+        ]
     },
     "league/flysystem-bundle": {
         "version": "3.4",
@@ -159,8 +184,33 @@
             "config/packages/stof_doctrine_extensions.yaml"
         ]
     },
+    "stripe/stripe-php": {
+        "version": "20.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "19.0",
+            "ref": "d6829c693e3927a8972c7671d74a1a5c505712b0"
+        },
+        "files": [
+            "config/packages/stripe.yaml"
+        ]
+    },
     "sylius-labs/doctrine-migrations-extra-bundle": {
         "version": "v0.2.2"
+    },
+    "sylius/adyen-plugin": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "e11b9569776d49c4155b20f44a02c65bf72a8197"
+        },
+        "files": [
+            "config/packages/sylius_adyen.yaml",
+            "config/routes/sylius_adyen.yaml"
+        ]
     },
     "sylius/fixtures-bundle": {
         "version": "v1.9.0"
@@ -195,6 +245,22 @@
         "files": [
             "config/packages/sylius_paypal.yaml",
             "config/routes/sylius_paypal.yaml"
+        ]
+    },
+    "sylius/pdf-generation-bundle": {
+        "version": "v1.0.0"
+    },
+    "sylius/refund-plugin": {
+        "version": "2.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "261e0e5e0902aa5f6178b1eac5c0019191c6d5c4"
+        },
+        "files": [
+            "config/packages/sylius_refund.yaml",
+            "config/routes/sylius_refund.yaml"
         ]
     },
     "sylius/resource-bundle": {
@@ -407,12 +473,12 @@
         ]
     },
     "symfony/stimulus-bundle": {
-        "version": "2.35",
+        "version": "2.36",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "2.24",
-            "ref": "d21494ed2ddbde38942e8278299a23ce5cf4a9a1"
+            "version": "2.25",
+            "ref": "9b51a69079f3629061dfe0e5d7e20f5a9b20752c"
         },
         "files": [
             "assets/controllers.json",
@@ -440,7 +506,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "main",
             "version": "6.4",
-            "ref": "f250159ebe99153d0c640a3e7742876fc7453f2c"
+            "ref": "06dacf16872358cb1f2494e089070ff2d045233a"
         },
         "files": [
             "config/packages/twig.yaml",
@@ -535,8 +601,8 @@
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "2.1",
-            "ref": "b346dae458e64a1921ded2125993d94bd719a8dd"
+            "version": "2.2",
+            "ref": "b618bf5f17ed61f523da7153025bf58ec9502f65"
         },
         "files": [
             "assets/app.js",
